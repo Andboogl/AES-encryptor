@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>868</width>
+    <height>227</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AES encryptor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>871</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: #959595;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="encrypt_btn">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>401</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background: #BABABA;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	background: #CDCDCD;
+}</string>
+     </property>
+     <property name="text">
+      <string>Шифрувати</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="decrypt_btn">
+     <property name="geometry">
+      <rect>
+       <x>440</x>
+       <y>160</y>
+       <width>421</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background: #BABABA;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	background: #CDCDCD;
+}</string>
+     </property>
+     <property name="text">
+      <string>Розшифрувати</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="file_path">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>611</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding-left: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Шлях до файлу (для шифрування, розшифрування)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chose_file_path_btn">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>10</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background: #BABABA;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	background: #CDCDCD;
+}</string>
+     </property>
+     <property name="text">
+      <string>Вибрати...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>611</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding-left: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Пароль (для шифрування та розшифрування)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="generate_password_btn">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>60</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background: #BABABA;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	background: #CDCDCD;
+}</string>
+     </property>
+     <property name="text">
+      <string>Згенерувати пароль...</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="creation_dir">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>611</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding-left: 5px;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Папка, куди шифрувати та розшифровувати файл (за замовчюванням у директорію файлу)</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chose_creation_path_btn">
+     <property name="geometry">
+      <rect>
+       <x>630</x>
+       <y>110</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	background: #BABABA;
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+	background: #CDCDCD;
+}</string>
+     </property>
+     <property name="text">
+      <string>Вибрати...</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
