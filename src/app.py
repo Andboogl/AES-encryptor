@@ -47,7 +47,7 @@ class MainWindow(QMainWindow):
                     utils.show_message(self, f'Зашифрована версія файлу створенна за шляхом {encrypt_file_path}')
 
                 except:
-                    utils.show_message(self, 'Невірний пароль або файл невірного формату')
+                    utils.show_message(self, 'Файл видалений')
 
             else:
                 utils.show_message(self, 'Введіть або згенеруйте пароль (не вказаний пароль)')
@@ -72,7 +72,7 @@ class MainWindow(QMainWindow):
                     utils.show_message(self, f'Розшифрована версія файлу створенна за шляхом {decrypt_file_path}')
 
                 except ValueError:
-                    utils.show_message(self, 'Не вдалося розшифрувати файл (Невірний пароль або невірний формат файлу)')
+                    utils.show_message(self, 'Не вдалося розшифрувати файл (Невірний пароль, файлу не існує або невірний формат файлу).')
 
             else:
                 utils.show_message(self, 'Ви не ввели пароль')
